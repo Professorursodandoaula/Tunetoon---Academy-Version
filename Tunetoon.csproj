@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.3.%2a</ApplicationVersion>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>toaster.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VersionPrefix>2.0.3</VersionPrefix>
+    <Description>A multi-toon launcher</Description>
+    <Copyright>Copyright © 2017-2023 Null / DioExtreme</Copyright>
+    <Company>Null / DioExtreme</Company>
+    <Title>Tunetoon</Title>
+    <PackageProjectUrl>https://github.com/DioExtreme</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DioExtreme/Tunetoon</RepositoryUrl>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ErrorReport>none</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Grid\AccountGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="toaster.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MulticontrollerNet9\Atlas.csproj" />
+  </ItemGroup>
+</Project>
